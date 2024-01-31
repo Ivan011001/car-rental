@@ -4,12 +4,16 @@ import { Link } from "react-router-dom";
 const SharedLayout = () => {
   return (
     <div>
-      <nav>
-        <Link to="/">Home</Link>
-        <Link to="/catalog">Catalog</Link>
-        <Link to="/favorites">Favorite</Link>
-      </nav>
-      <Outlet />
+      <header>
+        <nav>
+          <Link to="/">Home</Link>
+          <Link to="/catalog">Catalog</Link>
+          <Link to="/favorites">Favorite</Link>
+        </nav>
+      </header>
+      <main>
+        <Outlet />
+      </main>
     </div>
   );
 };

@@ -16,10 +16,10 @@ const CatalogPage = () => {
   }, [dispatch]);
 
   return (
-    <div>
+    <section>
       <AdvertList />
       {isLoading && <Loader />}
-    </div>
+    </section>
   );
 };
 
