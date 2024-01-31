@@ -9,6 +9,8 @@ const HomePage = () => {
   return (
     <div>
       <Button
+        padX={50}
+        padY={10}
         onClick={() => {
           setIsModalOpen((prev) => !prev);
         }}
