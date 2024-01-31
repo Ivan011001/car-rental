@@ -1,13 +1,11 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import axios from "axios";
+import { axiosInstance } from "../../../lib/axiosInstance";
 
 export const getAllCars = createAsyncThunk(
   "cars/getAll",
   async (credentials, thunkAPI) => {
     try {
-      const response = await axios.get(
-        "https://65ba58e0b4d53c066552aeaf.mockapi.io/api/adverts"
-      );
+      const response = await axiosInstance.get("/adverts");
       return response.data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);

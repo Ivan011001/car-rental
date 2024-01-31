@@ -1,3 +1,1 @@
-import { formatMileage } from "./formatMileage";
-
-export { formatMileage };
+export { default } from "./formatMileage";
