@@ -57,6 +57,11 @@ export const StyledAdvertItemTitle = styled.h3`
   font-size: 16px;
   font-weight: 500;
   line-height: 150%;
+
+  max-width: 20ch;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 `;
 
 export const StyledAdvertItemModel = styled.span`
