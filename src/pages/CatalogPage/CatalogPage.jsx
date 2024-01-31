@@ -5,6 +5,7 @@ import { getAllCars } from "../../services/state/cars/carsOperations";
 import { selectIsLoading } from "../../services/state/cars/carsSelectors";
 
 import Loader from "../../components/ui/Loader";
+import AdvertList from "./_components/AdvertList";
 
 const CatalogPage = () => {
   const dispatch = useDispatch();
@@ -16,7 +17,7 @@ const CatalogPage = () => {
 
   return (
     <div>
-      CatalogPage
+      <AdvertList />
       {isLoading && <Loader />}
     </div>
   );
