@@ -3,8 +3,6 @@ import styled from "styled-components";
 export const StyledButton = styled.button`
   color: #fff;
   font-size: 14px;
-  font-style: normal;
-
   font-weight: 600;
   line-height: 142.857%;
   border: none;

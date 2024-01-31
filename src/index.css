@@ -56,5 +56,6 @@ img {
 }
 
 button {
+  font-family: Manrope, sans-serif;
   cursor: pointer;
 }
