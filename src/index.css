@@ -25,6 +25,10 @@ body {
   min-height: 100vh;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 #root {
   height: 100%;
   /* width: 1184px; */
@@ -58,4 +62,8 @@ img {
 button {
   font-family: Manrope, sans-serif;
   cursor: pointer;
+}
+
+a {
+  text-decoration: none;
 }
