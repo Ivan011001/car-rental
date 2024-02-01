@@ -1,4 +1,4 @@
-import { StyledLogo, StyledLogoIcon } from "./Logo.styled";
+import { StyledLogo, StyledLogoIcon, StyledLogoTitle } from "./Logo.styled";
 
 const Logo = () => {
   return (
@@ -6,6 +6,7 @@ const Logo = () => {
       <StyledLogoIcon>
         <use xlinkHref="/sprite.svg#icon-logo" />
       </StyledLogoIcon>
+      <StyledLogoTitle>Car Rental</StyledLogoTitle>
     </StyledLogo>
   );
 };
