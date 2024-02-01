@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
-import { extractLocation, selectAccessories } from "../../../../utils";
+import { extractLocation, selectAccessories } from "@/utils";
 
-import Button from "../../../../components/ui/Button";
+import Button from "@/components/ui/Button";
 
 import {
   StyledAdvertItemCard,

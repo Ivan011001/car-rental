@@ -88,6 +88,9 @@ export const StyledAdvertItemFeaturesList = styled.ul`
   column-gap: 6px;
   row-gap: 4px;
 
+  height: 40px;
+  overflow: hidden;
+
   & > li {
     &:not(:last-child)::after {
       content: "";

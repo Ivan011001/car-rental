@@ -1,7 +1,7 @@
 import { useState } from "react";
 
-import Button from "../../components/ui/Button";
-import ModalWindow from "../../components/ModalWindow";
+import Button from "@/components/ui/Button";
+import ModalWindow from "@/components/ModalWindow";
 
 const HomePage = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);

@@ -1,5 +1,5 @@
 import { useSelector } from "react-redux";
-import { selectCars } from "../../../../services/state/cars/carsSelectors";
+import { selectCars } from "@/services/state/cars/carsSelectors";
 
 import AdvertListItem from "../AdvertListItem";
 

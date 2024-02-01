@@ -1,10 +1,11 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
-import { getAllCars } from "../../services/state/cars/carsOperations";
-import { selectIsLoading } from "../../services/state/cars/carsSelectors";
+import { getAllCars } from "@/services/state/cars/carsOperations";
+import { selectIsLoading } from "@/services/state/cars/carsSelectors";
 
-import Loader from "../../components/ui/Loader";
+import Loader from "@/components/ui/Loader";
+
 import AdvertList from "./_components/AdvertList";
 
 const CatalogPage = () => {
