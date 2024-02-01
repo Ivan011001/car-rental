@@ -1,4 +1,5 @@
 /* eslint-disable react/prop-types */
+import { extractLocation, selectAccessories } from "../../../../utils";
 
 import Button from "../../../../components/ui/Button";
 
@@ -11,8 +12,8 @@ import {
   StyledAdvertItemTitle,
   StyledAdvertItemModel,
   StyledAdvertItemPrice,
-  // StyledAdvertItemFeaturesList,
-  // StyledAdvertItemFeature,
+  StyledAdvertItemFeaturesList,
+  StyledAdvertItemFeature,
 } from "./AdvertListItem.styled";
 
 const AdvertListItem = ({ car }) => {
@@ -33,6 +34,23 @@ const AdvertListItem = ({ car }) => {
         </StyledAdvertItemTitle>
         <StyledAdvertItemPrice>{car.rentalPrice}</StyledAdvertItemPrice>
       </StyledAdvertItemInfoContainer>
+
+      <StyledAdvertItemFeaturesList>
+        <StyledAdvertItemFeature>
+          {extractLocation(car.address).city}
+        </StyledAdvertItemFeature>
+        <StyledAdvertItemFeature>
+          {extractLocation(car.address).country}
+        </StyledAdvertItemFeature>
+        <StyledAdvertItemFeature>{car.rentalCompany}</StyledAdvertItemFeature>
+        <StyledAdvertItemFeature>Premium</StyledAdvertItemFeature>
+        <StyledAdvertItemFeature>{car.type}</StyledAdvertItemFeature>
+        <StyledAdvertItemFeature>{car.model}</StyledAdvertItemFeature>
+        <StyledAdvertItemFeature>{car.id}</StyledAdvertItemFeature>
+        <StyledAdvertItemFeature>
+          {selectAccessories(car.accessories)}
+        </StyledAdvertItemFeature>
+      </StyledAdvertItemFeaturesList>
 
       <Button padX={99} padY={12}>
         Learn More

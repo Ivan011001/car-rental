@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
-export const StyledAdvertItemCard = styled.li``;
+export const StyledAdvertItemCard = styled.li`
+  width: 274px;
+`;
 
 export const StyledAdvertItemCardImageWrapper = styled.div`
   height: 268px;
@@ -76,6 +78,30 @@ export const StyledAdvertItemPrice = styled.p`
   line-height: 150%;
 `;
 
-export const StyledAdvertItemFeaturesList = styled.ul``;
+export const StyledAdvertItemFeaturesList = styled.ul`
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  column-gap: 6px;
+  row-gap: 4px;
 
-export const StyledAdvertItemFeature = styled.li``;
+  & > li {
+    &:not(:last-child)::after {
+      content: "";
+      display: block;
+      width: 1px;
+      height: 16px;
+      background-color: rgba(18, 20, 23, 0.1);
+    }
+  }
+`;
+
+export const StyledAdvertItemFeature = styled.li`
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+
+  font-size: 12px;
+  line-height: 150%;
+`;

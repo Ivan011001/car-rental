@@ -10,7 +10,7 @@ export const StyledNav = styled.nav`
 
 export const StyledNavLink = styled(NavLink)`
   color: #fff;
-  color: ${(props) => console.log(props)};
+
   transition: var(--transition);
 
   &:hover,
