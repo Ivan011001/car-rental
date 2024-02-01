@@ -9,12 +9,24 @@ export const StyledNav = styled.nav`
 `;
 
 export const StyledNavLink = styled(NavLink)`
+  position: relative;
   color: #fff;
-
   transition: var(--transition);
 
   &:hover,
   &:focus {
     color: var(--hover-color);
+  }
+
+  &.active {
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      height: 2px;
+      width: 100%;
+      background-color: #fff;
+    }
   }
 `;
