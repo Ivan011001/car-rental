@@ -19,42 +19,42 @@ import {
 const AdvertListItem = ({ car }) => {
   return (
     <StyledAdvertItemCard>
-      <StyledAdvertItemCardImageWrapper $img={car.img}>
-        <StyledAdvertItemLikeButton>
-          <StyledAdvertItemLikeIcon>
-            <use xlinkHref="/sprite.svg#icon-heart" />
-          </StyledAdvertItemLikeIcon>
-        </StyledAdvertItemLikeButton>
-      </StyledAdvertItemCardImageWrapper>
+      <div>
+        <StyledAdvertItemCardImageWrapper $img={car.img}>
+          <StyledAdvertItemLikeButton>
+            <StyledAdvertItemLikeIcon>
+              <use xlinkHref="/sprite.svg#icon-heart" />
+            </StyledAdvertItemLikeIcon>
+          </StyledAdvertItemLikeButton>
+        </StyledAdvertItemCardImageWrapper>
 
-      <StyledAdvertItemInfoContainer>
-        <StyledAdvertItemTitle>
-          {car.make} <StyledAdvertItemModel>{car.model}</StyledAdvertItemModel>,{" "}
-          {car.year}
-        </StyledAdvertItemTitle>
-        <StyledAdvertItemPrice>{car.rentalPrice}</StyledAdvertItemPrice>
-      </StyledAdvertItemInfoContainer>
+        <StyledAdvertItemInfoContainer>
+          <StyledAdvertItemTitle>
+            {car.make} <StyledAdvertItemModel>{car.model}</StyledAdvertItemModel>,{" "}
+            {car.year}
+          </StyledAdvertItemTitle>
+          <StyledAdvertItemPrice>{car.rentalPrice}</StyledAdvertItemPrice>
+        </StyledAdvertItemInfoContainer>
 
-      <StyledAdvertItemFeaturesList>
-        <StyledAdvertItemFeature>
-          {extractLocation(car.address).city}
-        </StyledAdvertItemFeature>
-        <StyledAdvertItemFeature>
-          {extractLocation(car.address).country}
-        </StyledAdvertItemFeature>
-        <StyledAdvertItemFeature>{car.rentalCompany}</StyledAdvertItemFeature>
-        <StyledAdvertItemFeature>Premium</StyledAdvertItemFeature>
-        <StyledAdvertItemFeature>{car.type}</StyledAdvertItemFeature>
-        <StyledAdvertItemFeature>{car.model}</StyledAdvertItemFeature>
-        <StyledAdvertItemFeature>{car.id}</StyledAdvertItemFeature>
-        <StyledAdvertItemFeature>
-          {selectAccessories(car.accessories)}
-        </StyledAdvertItemFeature>
-      </StyledAdvertItemFeaturesList>
+        <StyledAdvertItemFeaturesList>
+          <StyledAdvertItemFeature>
+            {extractLocation(car.address).city}
+          </StyledAdvertItemFeature>
+          <StyledAdvertItemFeature>
+            {extractLocation(car.address).country}
+          </StyledAdvertItemFeature>
+          <StyledAdvertItemFeature>{car.rentalCompany}</StyledAdvertItemFeature>
+          <StyledAdvertItemFeature>Premium</StyledAdvertItemFeature>
+          <StyledAdvertItemFeature>{car.type}</StyledAdvertItemFeature>
+          <StyledAdvertItemFeature>{car.model}</StyledAdvertItemFeature>
+          <StyledAdvertItemFeature>{car.id}</StyledAdvertItemFeature>
+          <StyledAdvertItemFeature>
+            {selectAccessories(car.accessories)}
+          </StyledAdvertItemFeature>
+        </StyledAdvertItemFeaturesList>
+      </div>
 
-      <Button padX={99} padY={12}>
-        Learn More
-      </Button>
+      <Button padY={12}>Learn More</Button>
     </StyledAdvertItemCard>
   );
 };

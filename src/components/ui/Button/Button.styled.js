@@ -7,7 +7,13 @@ export const StyledButton = styled.button`
   line-height: 142.857%;
   border: none;
 
-  padding: ${({ $padY, $padX }) => `${$padY}px ${$padX}px`};
+  padding: ${({ $padY, $padX }) => {
+    if (!$padX) {
+      return `${$padY}px 0`;
+    }
+
+    return `${$padY}px ${$padX}px`;
+  }};
   border-radius: 12px;
   background: var(--accent-color);
 

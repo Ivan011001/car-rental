@@ -2,6 +2,9 @@ import styled from "styled-components";
 
 export const StyledAdvertItemCard = styled.li`
   width: 274px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
 `;
 
 export const StyledAdvertItemCardImageWrapper = styled.div`
