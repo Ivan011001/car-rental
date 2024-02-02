@@ -32,8 +32,6 @@ const AdvertListItem = ({ car }) => {
     dispatch(toggleFavorite(car));
   };
 
-  console.log(2);
-
   return (
     <StyledAdvertItemCard>
       <div>

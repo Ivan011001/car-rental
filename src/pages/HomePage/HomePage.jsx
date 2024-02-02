@@ -1,42 +1,41 @@
 import { useState } from "react";
 
 import Button from "@/components/ui/Button";
-import ModalWindow from "@/components/ModalWindow";
+import AdvertDetailsModal from "@/components/AdvertDetailsModal";
+
+const mockCar = {
+  id: 9582,
+  year: 2008,
+  make: "Buick",
+  model: "Enclave",
+  type: "SUV",
+  img: "https://ftp.goit.study/img/cars-test-task/buick_enclave.jpeg",
+  description:
+    "The Buick Enclave is a stylish and spacious SUV known for its comfortable ride and luxurious features.",
+  fuelConsumption: "10.5",
+  engineSize: "3.6L V6",
+  accessories: ["Leather seats", "Panoramic sunroof", "Premium audio system"],
+  functionalities: ["Power liftgate", "Remote start", "Blind-spot monitoring"],
+  rentalPrice: "$40",
+  rentalCompany: "Luxury Car Rentals",
+  address: "123 Example Street, Kiev, Ukraine",
+  rentalConditions: "Minimum age: 25\nValid driver's license\nSecurity deposit required",
+  mileage: 5858,
+};
 
 const HomePage = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  return (
-    <div>
-      <Button
-        padX={50}
-        padY={10}
-        onClick={() => {
-          setIsModalOpen((prev) => !prev);
-        }}
-      >
-        Hello
-      </Button>
+  const toggleModal = () => {
+    setIsModalOpen((prev) => !prev);
+  };
 
-      {isModalOpen && (
-        <ModalWindow
-          onClose={() => {
-            setIsModalOpen((prev) => !prev);
-          }}
-        >
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores dolores
-          magnam quae. Ullam cum dolore nihil. Eum culpa voluptatibus sequi excepturi.
-          Esse fugiat a saepe exercitationem optio? Alias culpa iusto eveniet nam,
-          tempora, in facere, obcaecati esse pariatur nisi dolor. Odio sit eligendi nulla
-          autem repudiandae similique! Non labore, doloribus cum, deserunt iure dicta
-          consectetur sint iusto consequatur fugiat obcaecati vero enim delectus!
-          Provident vitae quisquam quas natus architecto at quis dignissimos, nihil fugit
-          est molestiae accusamus ex expedita amet eveniet corporis enim sunt ipsam minima
-          inventore repellat fuga consequatur quaerat! Cum alias culpa aperiam suscipit
-          ducimus velit voluptate aut!
-        </ModalWindow>
-      )}
-    </div>
+  return (
+    <>
+      <Button onClick={toggleModal}> Open Modal</Button>
+
+      {isModalOpen && <AdvertDetailsModal car={mockCar} onClose={toggleModal} />}
+    </>
   );
 };
 
