@@ -4,29 +4,28 @@ import { NavLink } from "react-router-dom";
 
 export const StyledNav = styled.nav`
   display: flex;
-  align-items: center;
   gap: 16px;
 `;
 
 export const StyledNavLink = styled(NavLink)`
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
   color: #fff;
   transition: var(--transition);
 
-  &:hover,
-  &:focus {
+  &:hover {
     color: var(--hover-color);
   }
 
   &.active {
     &::after {
       content: "";
-      position: absolute;
-      bottom: -5px;
-      left: 0;
       height: 2px;
       width: 100%;
       background-color: #fff;
+      border-radius: 12px;
     }
   }
 `;
