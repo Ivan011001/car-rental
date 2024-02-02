@@ -1,13 +1,18 @@
 import Logo from "../ui/Logo/Logo";
 import Nav from "../ui/Nav/Nav";
+import Container from "../ui/Container";
 
-import { StyledHeader } from "./Header.styled";
+import { StyledHeader, StyledHeaderContainer } from "./Header.styled";
 
 const Header = () => {
   return (
     <StyledHeader>
-      <Logo />
-      <Nav />
+      <Container>
+        <StyledHeaderContainer>
+          <Logo />
+          <Nav />
+        </StyledHeaderContainer>
+      </Container>
     </StyledHeader>
   );
 };
