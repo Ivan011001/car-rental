@@ -1,7 +1,9 @@
 /* eslint-disable react/prop-types */
-import ModalWindow from "../ui/ModalWindow";
 
 import { extractLocation, extractConditions } from "@/utils";
+
+import Button from "../ui/Button";
+import ModalWindow from "../ui/ModalWindow";
 
 import {
   StyledAdvertDetailsContainer,
@@ -13,9 +15,12 @@ import {
   StyledAdvertDetailsFeaturesList,
   StyledAdvertDetailsFeature,
   StyledAdvertDetailsDescription,
+  StyledAdvertDetailsFuncList,
+  StyledAdvertDetailsFunc,
   StyledAdvertDetailsRentalList,
   StyledAdvertDetailsRentalItem,
   StyledAdvertDetailsRentalItemValue,
+  StyledAdvertDetailsTelephon,
 } from "./AdvertDetailsModal.styled";
 
 const AdvertDetailsModal = ({ car, onClose }) => {
@@ -57,18 +62,18 @@ const AdvertDetailsModal = ({ car, onClose }) => {
             <StyledAdvertDetailsFeatureHeading>
               Accessories and functionalities:
             </StyledAdvertDetailsFeatureHeading>
-            <StyledAdvertDetailsFeaturesList>
+            <StyledAdvertDetailsFuncList>
               {car.accessories.map((accessorie) => (
-                <StyledAdvertDetailsFeature key={accessorie}>
+                <StyledAdvertDetailsFunc key={accessorie}>
                   {accessorie}
-                </StyledAdvertDetailsFeature>
+                </StyledAdvertDetailsFunc>
               ))}
               {car.functionalities.map((functionalitie) => (
-                <StyledAdvertDetailsFeature key={functionalitie}>
+                <StyledAdvertDetailsFunc key={functionalitie}>
                   {functionalitie}
-                </StyledAdvertDetailsFeature>
+                </StyledAdvertDetailsFunc>
               ))}
-            </StyledAdvertDetailsFeaturesList>
+            </StyledAdvertDetailsFuncList>
           </div>
 
           <div>
@@ -96,6 +101,12 @@ const AdvertDetailsModal = ({ car, onClose }) => {
               </StyledAdvertDetailsRentalItem>
             </StyledAdvertDetailsRentalList>
           </div>
+
+          <Button padY={12} padX={50}>
+            <StyledAdvertDetailsTelephon href="tel:+380730000000">
+              Car rental
+            </StyledAdvertDetailsTelephon>
+          </Button>
         </StyledAdvertDetailsBody>
       </StyledAdvertDetailsContainer>
     </ModalWindow>

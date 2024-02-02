@@ -15,7 +15,8 @@ export const StyledModalWindowOverlay = styled.div`
 export const StyledModalWindow = styled.div`
   position: relative;
 
-  /* width: 541px; */
+  box-sizing: border-box;
+  width: 541px;
   border-radius: 24px;
   padding: 40px;
   background-color: var(--main-bg-color);
