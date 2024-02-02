@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 
-import { extractLocation, extractConditions } from "@/utils";
+import { extractLocation, extractConditions, formatMileage } from "@/utils";
 
 import Button from "../ui/Button";
 import ModalWindow from "../ui/ModalWindow";
@@ -43,13 +43,14 @@ const AdvertDetailsModal = ({ car, onClose }) => {
               <StyledAdvertDetailsFeature>
                 {extractLocation(car.address).country}
               </StyledAdvertDetailsFeature>
-              <StyledAdvertDetailsFeature>{car.rentalCompany}</StyledAdvertDetailsFeature>
-              <StyledAdvertDetailsFeature>Premium</StyledAdvertDetailsFeature>
-              <StyledAdvertDetailsFeature>{car.type}</StyledAdvertDetailsFeature>
-              <StyledAdvertDetailsFeature>{car.model}</StyledAdvertDetailsFeature>
-              <StyledAdvertDetailsFeature>{car.id}</StyledAdvertDetailsFeature>
+              <StyledAdvertDetailsFeature>Id: {car.id}</StyledAdvertDetailsFeature>
+              <StyledAdvertDetailsFeature>Year: {car.year}</StyledAdvertDetailsFeature>
+              <StyledAdvertDetailsFeature>Type: {car.type}</StyledAdvertDetailsFeature>
               <StyledAdvertDetailsFeature>
-                {car.accessories[0]}
+                Fuel Consumption: {car.fuelConsumption}
+              </StyledAdvertDetailsFeature>
+              <StyledAdvertDetailsFeature>
+                Engine Size: {car.engineSize}
               </StyledAdvertDetailsFeature>
             </StyledAdvertDetailsFeaturesList>
 
@@ -89,7 +90,7 @@ const AdvertDetailsModal = ({ car, onClose }) => {
               <StyledAdvertDetailsRentalItem>
                 Mileage:{" "}
                 <StyledAdvertDetailsRentalItemValue>
-                  {car.mileage}
+                  {formatMileage(car.mileage)}
                 </StyledAdvertDetailsRentalItemValue>
               </StyledAdvertDetailsRentalItem>
 
