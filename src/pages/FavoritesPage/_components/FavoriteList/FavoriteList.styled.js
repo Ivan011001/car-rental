@@ -4,7 +4,7 @@ export const StyledFavoriteList = styled.ul`
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  justify-content: space-between;
 
+  column-gap: 29.3px;
   row-gap: 50px;
 `;
