@@ -15,7 +15,8 @@ export const StyledNavLink = styled(NavLink)`
   color: #fff;
   transition: var(--transition);
 
-  &:hover {
+  &:hover,
+  &:focus {
     color: var(--hover-color);
   }
 
