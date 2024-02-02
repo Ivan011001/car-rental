@@ -11,7 +11,9 @@ const AdvertList = () => {
   return (
     <StyledAdvertList>
       {cars.map((car) => (
-        <AdvertListItem key={car.id} car={car} />
+        <li key={car.id}>
+          <AdvertListItem car={car} />
+        </li>
       ))}
     </StyledAdvertList>
   );

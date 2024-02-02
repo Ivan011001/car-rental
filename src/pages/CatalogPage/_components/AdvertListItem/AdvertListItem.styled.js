@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const StyledAdvertItemCard = styled.li`
+export const StyledAdvertItemCard = styled.div`
   width: 274px;
   display: flex;
   flex-direction: column;
@@ -42,8 +42,10 @@ export const StyledAdvertItemLikeButton = styled.button`
 export const StyledAdvertItemLikeIcon = styled.svg`
   width: 18px;
   height: 18px;
-  fill: none;
-  stroke: rgba(255, 255, 255, 0.8);
+
+  fill: ${({ $isFavorite }) => ($isFavorite ? "var(--accent-color)" : "none")};
+  stroke: ${({ $isFavorite }) =>
+    $isFavorite ? "var(--accent-color)" : "rgba(255, 255, 255, 0.8)"};
 
   transition: var(--transition);
 `;

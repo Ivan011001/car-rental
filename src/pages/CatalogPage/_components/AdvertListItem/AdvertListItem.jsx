@@ -1,6 +1,9 @@
 /* eslint-disable react/prop-types */
 import { useDispatch } from "react-redux";
-import { extractLocation, selectAccessories } from "@/utils";
+import {
+  extractLocation,
+  // selectAccessories
+} from "@/utils";
 import { toggleFavorite } from "@/services/state/cars/carsSlice";
 
 import Button from "@/components/ui/Button";
@@ -56,9 +59,10 @@ const AdvertListItem = ({ car }) => {
           <StyledAdvertItemFeature>{car.type}</StyledAdvertItemFeature>
           <StyledAdvertItemFeature>{car.model}</StyledAdvertItemFeature>
           <StyledAdvertItemFeature>{car.id}</StyledAdvertItemFeature>
-          <StyledAdvertItemFeature>
+          <StyledAdvertItemFeature>{car.accessories[0]}</StyledAdvertItemFeature>
+          {/* <StyledAdvertItemFeature>
             {selectAccessories(car.accessories)}
-          </StyledAdvertItemFeature>
+          </StyledAdvertItemFeature> */}
         </StyledAdvertItemFeaturesList>
       </div>
 
