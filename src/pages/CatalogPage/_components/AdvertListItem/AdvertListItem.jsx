@@ -1,10 +1,11 @@
 /* eslint-disable react/prop-types */
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import {
   extractLocation,
   // selectAccessories
 } from "@/utils";
 import { toggleFavorite } from "@/services/state/cars/carsSlice";
+import { selectFavorites } from "@/services/state/cars/carsSelectors";
 
 import Button from "@/components/ui/Button";
 
@@ -23,6 +24,7 @@ import {
 
 const AdvertListItem = ({ car }) => {
   const dispatch = useDispatch();
+  const favorites = useSelector(selectFavorites);
 
   const onFavoriteToggle = (id) => {
     dispatch(toggleFavorite(id));
@@ -33,7 +35,7 @@ const AdvertListItem = ({ car }) => {
       <div>
         <StyledAdvertItemCardImageWrapper $img={car.img}>
           <StyledAdvertItemLikeButton onClick={() => onFavoriteToggle(car.id)}>
-            <StyledAdvertItemLikeIcon>
+            <StyledAdvertItemLikeIcon $isFavorite={favorites.includes(car.id)}>
               <use xlinkHref="/sprite.svg#icon-heart" />
             </StyledAdvertItemLikeIcon>
           </StyledAdvertItemLikeButton>
