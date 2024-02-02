@@ -1,6 +1,5 @@
 import { formatMileage } from "./formatMileage";
 import { extractLocation } from "./extractLocation";
-import { extractConditions } from "./extractConditions";
-import { selectAccessories } from "./selectAccessories";
+import { parseConditions } from "./parseConditions";
 
-export { formatMileage, extractLocation, extractConditions, selectAccessories };
+export { formatMileage, extractLocation, parseConditions };

@@ -1,15 +1,12 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import {
-  extractLocation,
-  // selectAccessories
-} from "@/utils";
+import { extractLocation } from "@/utils";
 import { toggleFavorite } from "@/services/state/cars/carsSlice";
 import { selectFavorites } from "@/services/state/cars/carsSelectors";
 
 import Button from "@/components/ui/Button";
-import AdvertDetailsModal from "@/components/AdvertDetailsModal";
+import AdvertDetailsModal from "@/pages/CatalogPage/_components/AdvertDetailsModal";
 
 import {
   StyledAdvertItemCard,
@@ -72,9 +69,6 @@ const AdvertListItem = ({ car }) => {
             <StyledAdvertItemFeature>{car.model}</StyledAdvertItemFeature>
             <StyledAdvertItemFeature>{car.id}</StyledAdvertItemFeature>
             <StyledAdvertItemFeature>{car.accessories[0]}</StyledAdvertItemFeature>
-            {/* <StyledAdvertItemFeature>
-            {selectAccessories(car.accessories)}
-          </StyledAdvertItemFeature> */}
           </StyledAdvertItemFeaturesList>
         </div>
 

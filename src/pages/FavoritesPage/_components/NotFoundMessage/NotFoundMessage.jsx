@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import Button from "@/components/ui/Button";
 
@@ -8,6 +8,12 @@ import {
 } from "./NotFoundMessage.styled";
 
 const NotFoundMessage = () => {
+  const navigate = useNavigate();
+
+  const handleCatalogNavigate = () => {
+    navigate("/catalog");
+  };
+
   return (
     <StyledNotFoundMessageWrapper>
       <StyledNotFoundMessage>
@@ -15,10 +21,8 @@ const NotFoundMessage = () => {
         empty
       </StyledNotFoundMessage>
 
-      <Button padX={50} padY={12}>
-        <Link style={{ color: "inherit" }} to="/catalog">
-          Catalog
-        </Link>
+      <Button padX={50} padY={12} onClick={handleCatalogNavigate}>
+        Catalog
       </Button>
     </StyledNotFoundMessageWrapper>
   );

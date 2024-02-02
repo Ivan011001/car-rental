@@ -49,7 +49,7 @@ export const StyledAdvertDetailsFeatureHeading = styled.h3`
 `;
 
 export const StyledAdvertDetailsFeaturesList = styled.ul`
-  width: 300px;
+  max-width: 400px;
 
   display: flex;
   align-items: center;

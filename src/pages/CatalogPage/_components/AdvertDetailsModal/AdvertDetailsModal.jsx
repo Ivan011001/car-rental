@@ -1,9 +1,9 @@
 /* eslint-disable react/prop-types */
 
-import { extractLocation, extractConditions, formatMileage } from "@/utils";
+import { extractLocation, parseConditions, formatMileage } from "@/utils";
 
-import Button from "../ui/Button";
-import ModalWindow from "../ui/ModalWindow";
+import Button from "@/components/ui/Button";
+import ModalWindow from "@/components/ui/ModalWindow";
 
 import {
   StyledAdvertDetailsContainer,
@@ -40,15 +40,21 @@ const AdvertDetailsModal = ({ car, onClose }) => {
               <StyledAdvertDetailsFeature>
                 {extractLocation(car.address).city}
               </StyledAdvertDetailsFeature>
+
               <StyledAdvertDetailsFeature>
                 {extractLocation(car.address).country}
               </StyledAdvertDetailsFeature>
+
               <StyledAdvertDetailsFeature>Id: {car.id}</StyledAdvertDetailsFeature>
+
               <StyledAdvertDetailsFeature>Year: {car.year}</StyledAdvertDetailsFeature>
+
               <StyledAdvertDetailsFeature>Type: {car.type}</StyledAdvertDetailsFeature>
+
               <StyledAdvertDetailsFeature>
                 Fuel Consumption: {car.fuelConsumption}
               </StyledAdvertDetailsFeature>
+
               <StyledAdvertDetailsFeature>
                 Engine Size: {car.engineSize}
               </StyledAdvertDetailsFeature>
@@ -82,11 +88,19 @@ const AdvertDetailsModal = ({ car, onClose }) => {
               Rental conditions:
             </StyledAdvertDetailsFeatureHeading>
             <StyledAdvertDetailsRentalList>
-              {extractConditions(car.rentalConditions).map((condition) => (
+              <StyledAdvertDetailsRentalItem>
+                Minimum age:{" "}
+                <StyledAdvertDetailsRentalItemValue>
+                  {parseConditions(car.rentalConditions).minimumAge}
+                </StyledAdvertDetailsRentalItemValue>
+              </StyledAdvertDetailsRentalItem>
+
+              {parseConditions(car.rentalConditions).conditions.map((condition) => (
                 <StyledAdvertDetailsRentalItem key={condition}>
                   {condition}
                 </StyledAdvertDetailsRentalItem>
               ))}
+
               <StyledAdvertDetailsRentalItem>
                 Mileage:{" "}
                 <StyledAdvertDetailsRentalItemValue>
