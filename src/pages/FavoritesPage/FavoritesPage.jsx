@@ -2,6 +2,7 @@ import { useSelector } from "react-redux";
 import { selectFavorites } from "@/services/state/cars/carsSelectors";
 
 import FavoriteList from "./_components/FavoriteList";
+import NotFoundMessage from "./_components/NotFoundMessage";
 
 const FavoritesPage = () => {
   const favorites = useSelector(selectFavorites);
@@ -9,9 +10,7 @@ const FavoritesPage = () => {
   return (
     <section>
       {favorites.length === 0 ? (
-        <p>
-          Here all your favorite cars will be placed. Unfortunately, this list is empty
-        </p>
+        <NotFoundMessage />
       ) : (
         <FavoriteList favorites={favorites} />
       )}
