@@ -8,13 +8,13 @@ const FavoritesPage = () => {
   const favorites = useSelector(selectFavorites);
 
   return (
-    <div style={{ height: "100%" }}>
+    <>
       {favorites.length === 0 ? (
         <NotFoundMessage />
       ) : (
         <FavoriteList favorites={favorites} />
       )}
-    </div>
+    </>
   );
 };
 
