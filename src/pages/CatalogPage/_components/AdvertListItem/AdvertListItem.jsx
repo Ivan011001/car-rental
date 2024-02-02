@@ -26,16 +26,20 @@ const AdvertListItem = ({ car }) => {
   const dispatch = useDispatch();
   const favorites = useSelector(selectFavorites);
 
-  const onFavoriteToggle = (id) => {
-    dispatch(toggleFavorite(id));
+  const isFavorite = favorites.filter((favorite) => favorite.id === car.id)[0];
+
+  const onFavoriteToggle = (car) => {
+    dispatch(toggleFavorite(car));
   };
+
+  console.log(2);
 
   return (
     <StyledAdvertItemCard>
       <div>
         <StyledAdvertItemCardImageWrapper $img={car.img}>
-          <StyledAdvertItemLikeButton onClick={() => onFavoriteToggle(car.id)}>
-            <StyledAdvertItemLikeIcon $isFavorite={favorites.includes(car.id)}>
+          <StyledAdvertItemLikeButton onClick={() => onFavoriteToggle(car)}>
+            <StyledAdvertItemLikeIcon $isFavorite={isFavorite}>
               <use xlinkHref="/sprite.svg#icon-heart" />
             </StyledAdvertItemLikeIcon>
           </StyledAdvertItemLikeButton>

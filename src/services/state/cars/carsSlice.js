@@ -15,14 +15,14 @@ const carsSlice = createSlice({
   reducers: {
     toggleFavorite: (state, action) => {
       const isFavorite = state.favorites.find(
-        (favoriteId) => favoriteId === action.payload
+        (favorite) => favorite.id === action.payload.id
       );
 
       if (!isFavorite) {
         state.favorites.push(action.payload);
       } else {
         state.favorites = state.favorites.filter(
-          (favoriteId) => favoriteId !== action.payload
+          (favorite) => favorite.id !== action.payload.id
         );
       }
     },
