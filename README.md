@@ -14,6 +14,7 @@ Welcome to our Car Rental App! This application allows users to easily find and 
 
 ## Views
 
+<img width="980" alt="home page" src="public/screenshots/home.jpg">
 ![Home Page](<img width="980" alt="home page" src="public/screenshots/home.jpg">)
 *The welcoming home page displays main features and innovations.*
 
