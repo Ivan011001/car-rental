@@ -2,11 +2,16 @@
 
 import AdvertListItem from "@/pages/CatalogPage/_components/AdvertListItem";
 
-import { StyledFavoriteList } from "./FavoriteList.styled";
+import {
+  StyledFavoriteListWrapper,
+  StyledFavoriteListTitle,
+  StyledFavoriteList,
+} from "./FavoriteList.styled";
 
 const FavoriteList = ({ favorites }) => {
   return (
-    <div>
+    <StyledFavoriteListWrapper>
+      <StyledFavoriteListTitle>Favorite adverts:</StyledFavoriteListTitle>
       <StyledFavoriteList>
         {favorites.map((favorite) => (
           <li key={favorite.id}>
@@ -14,7 +19,7 @@ const FavoriteList = ({ favorites }) => {
           </li>
         ))}
       </StyledFavoriteList>
-    </div>
+    </StyledFavoriteListWrapper>
   );
 };
 
