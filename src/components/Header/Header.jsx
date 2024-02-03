@@ -9,7 +9,7 @@ const Header = () => {
     <StyledHeader>
       <Container>
         <StyledHeaderContainer>
-          <Logo />
+          <Logo text />
           <Nav />
         </StyledHeaderContainer>
       </Container>
