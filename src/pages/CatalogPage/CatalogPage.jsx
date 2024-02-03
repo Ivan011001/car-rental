@@ -21,9 +21,14 @@ const CatalogPage = () => {
 
   return (
     <StyledCatalogPage>
-      <AdvertForm />
-      <AdvertList />
-      {isLoading && <Loader />}
+      {isLoading ? (
+        <Loader />
+      ) : (
+        <>
+          <AdvertForm />
+          <AdvertList />
+        </>
+      )}
     </StyledCatalogPage>
   );
 };
