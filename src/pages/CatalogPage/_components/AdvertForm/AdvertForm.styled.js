@@ -30,7 +30,7 @@ export const StyledAvdretFormInput = styled.select`
   color: #121417;
 
   display: block;
-  width: 100%;
+  width: ${({ $width }) => `${$width}px`};
   border-radius: 14px;
   border: none;
   padding: 14px 18px;

@@ -40,6 +40,11 @@ const AdvertForm = () => {
 
   const onFormSubmit = (e) => {
     e.preventDefault();
+    const { brand, price } = e.target.elements;
+    const data = {
+      brand: brand.value,
+      price: price.value,
+    };
   };
 
   return (
@@ -48,12 +53,20 @@ const AdvertForm = () => {
         <StyledAdvertFormLabel htmlFor="car_brand">Car Brand</StyledAdvertFormLabel>
 
         <StyledAvdretFormCustomSelect>
-          <StyledAvdretFormInput placeholder="Enter the text" id="car_brand">
-            <option selected disabled>
+          <StyledAvdretFormInput
+            name="brand"
+            placeholder="Enter the text"
+            id="car_brand"
+            defaultValue=""
+            $width={224}
+          >
+            <option value="" disabled>
               Enter the text
             </option>
             {makes.map((make) => (
-              <option key={make}>{make}</option>
+              <option key={make} value={make}>
+                {make}
+              </option>
             ))}
           </StyledAvdretFormInput>
           <StyledAvdretFormArrowIcon>
@@ -66,8 +79,14 @@ const AdvertForm = () => {
         <StyledAdvertFormLabel htmlFor="car_price">Price/ 1 hour</StyledAdvertFormLabel>
 
         <StyledAvdretFormCustomSelect>
-          <StyledAvdretFormInput placeholder="To $" id="car_price">
-            <option selected disabled>
+          <StyledAvdretFormInput
+            name="price"
+            placeholder="To $"
+            id="car_price"
+            defaultValue=""
+            $width={125}
+          >
+            <option value="" disabled>
               To $
             </option>
             {prices.map((price) => (
@@ -90,16 +109,6 @@ const AdvertForm = () => {
       <Button padY={14} padX={44}>
         Search
       </Button>
-
-      <StyledAvdretFormCustomSelect>
-        <StyledAvdretFormInput>
-          {makes.map((make) => (
-            <option key={make} value={make}>
-              {make}
-            </option>
-          ))}
-        </StyledAvdretFormInput>
-      </StyledAvdretFormCustomSelect>
     </StyledAdvertForm>
   );
 };
