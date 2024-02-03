@@ -1,6 +1,7 @@
 # Car Rental
 
-Welcome to our Car Rental App! This application allows users to easily find and rent a car, making the process quick and hassle-free.
+Welcome to our Car Rental App! This application allows users to easily find and rent a car, making the process quick and hassle-free with the help of customizable search and favorites page
+
 
 ## Features
 
@@ -8,15 +9,18 @@ Welcome to our Car Rental App! This application allows users to easily find and 
 
 - **Booking System:** Reserve your desired car with our straightforward booking system. Receive confirmation and details via email.
 
-## Screenshots
+- **Favorites:** Store your most desired cars in on place - personal page, where you can save different cars depending on the situation.
+  
+
+## Views
 
 ![Home Page](/screenshots/home.png)
-*The welcoming home page displays featured cars and quick search options.*
+*The welcoming home page displays main features and innovations.*
 
-![Search Results](/screenshots/search-results.png)
-*Effortlessly filter through search results to find the perfect car.*
+![Catalog Page](/screenshots/catalog.png)
+*The catalog page shows the list of cars depending on filters.*
 
-![Favorites adverts](/screenshots/booking-confirmation.png)
+![Favorites adverts](/screenshots/favorites.png)
 *Discover and save rentals that you have liked the most.*
 
 ## Technologies Used
@@ -32,8 +36,5 @@ Welcome to our Car Rental App! This application allows users to easily find and 
 4. Set up environment variables (refer to `.env.example` for required variables).
 5. Run the application: `npm start`
 
-## Contributing
-
-We welcome contributions from the community! If you find a bug or have an enhancement in mind, please open an issue or submit a pull request.
 
 Happy renting!
