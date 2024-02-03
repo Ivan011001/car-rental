@@ -1,5 +1,3 @@
-
-
 # Car Rental
 
 Welcome to our Car Rental App! This application allows users to easily find and rent a car, making the process quick and hassle-free with the help of customizable search and favorites page
@@ -15,14 +13,15 @@ Welcome to our Car Rental App! This application allows users to easily find and 
   
 
 ## Views
+![Home Page]
 <img width="980" alt="home page" src="public/screenshots/home.png">
-![Home Page](/screenshots/home.png)
 *The welcoming home page displays main features and innovations.*
 
 ![Catalog Page](/screenshots/catalog.png)
 *The catalog page shows the list of cars depending on filters.*
 
-![Favorites adverts](/screenshots/favorites.png)
+![Favorites adverts]
+<img width="980" alt="home page" src="public/screenshots/favorites.png">
 *Discover and save rentals that you have liked the most.*
 
 ## Technologies Used
