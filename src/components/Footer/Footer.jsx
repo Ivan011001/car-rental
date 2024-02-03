@@ -1,7 +1,12 @@
 import Logo from "../ui/Logo";
 import Container from "../ui/Container";
 
-import { StyledFooter, StyledFooterContainer } from "./Footer.styled";
+import {
+  StyledFooter,
+  StyledFooterContainer,
+  StyledFooterMetaContainer,
+  StyledFooterMetaLink,
+} from "./Footer.styled";
 
 const Footer = () => {
   return (
@@ -9,6 +14,23 @@ const Footer = () => {
       <Container>
         <StyledFooterContainer>
           <Logo />
+
+          <StyledFooterMetaContainer>
+            <StyledFooterMetaLink
+              href="https://github.com/Ivan011001/car-rental"
+              target="_blank"
+              referrerPolicy="no-referrer"
+            >
+              Privacy Policy
+            </StyledFooterMetaLink>
+            <StyledFooterMetaLink
+              href="https://github.com/Ivan011001/car-rental"
+              target="_blank"
+              referrerPolicy="no-referrer"
+            >
+              Terms & Conditions
+            </StyledFooterMetaLink>
+          </StyledFooterMetaContainer>
         </StyledFooterContainer>
       </Container>
     </StyledFooter>

@@ -68,7 +68,6 @@ const AdvertListItem = ({ car }) => {
             <StyledAdvertItemFeature>{car.type}</StyledAdvertItemFeature>
             <StyledAdvertItemFeature>{car.model}</StyledAdvertItemFeature>
             <StyledAdvertItemFeature>{car.id}</StyledAdvertItemFeature>
-            <StyledAdvertItemFeature>{car.accessories[0]}</StyledAdvertItemFeature>
           </StyledAdvertItemFeaturesList>
         </div>
 
