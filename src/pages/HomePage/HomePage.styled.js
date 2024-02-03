@@ -5,7 +5,7 @@ export const StyledHomePageTitle = styled.h1`
   font-size: 34px;
   color: var(--secondary-text-color);
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 `;
 
 export const StyledHomePageTitleName = styled.span`
