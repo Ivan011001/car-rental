@@ -24,6 +24,10 @@ import {
 } from "./AdvertDetailsModal.styled";
 
 const AdvertDetailsModal = ({ car, onClose }) => {
+  const { city, country } = extractLocation(car.address);
+  const { minimumAge, conditions } = parseConditions(car.rentalConditions);
+  const mileage = formatMileage(car.mileage);
+
   return (
     <ModalWindow onClose={onClose}>
       <StyledAdvertDetailsContainer>
@@ -37,13 +41,9 @@ const AdvertDetailsModal = ({ car, onClose }) => {
             </StyledAdvertDetailsTitle>
 
             <StyledAdvertDetailsFeaturesList>
-              <StyledAdvertDetailsFeature>
-                {extractLocation(car.address).city}
-              </StyledAdvertDetailsFeature>
+              <StyledAdvertDetailsFeature>{city}</StyledAdvertDetailsFeature>
 
-              <StyledAdvertDetailsFeature>
-                {extractLocation(car.address).country}
-              </StyledAdvertDetailsFeature>
+              <StyledAdvertDetailsFeature>{country}</StyledAdvertDetailsFeature>
 
               <StyledAdvertDetailsFeature>Id: {car.id}</StyledAdvertDetailsFeature>
 
@@ -91,11 +91,11 @@ const AdvertDetailsModal = ({ car, onClose }) => {
               <StyledAdvertDetailsRentalItem>
                 Minimum age:{" "}
                 <StyledAdvertDetailsRentalItemValue>
-                  {parseConditions(car.rentalConditions).minimumAge}
+                  {minimumAge}
                 </StyledAdvertDetailsRentalItemValue>
               </StyledAdvertDetailsRentalItem>
 
-              {parseConditions(car.rentalConditions).conditions.map((condition) => (
+              {conditions.map((condition) => (
                 <StyledAdvertDetailsRentalItem key={condition}>
                   {condition}
                 </StyledAdvertDetailsRentalItem>
@@ -104,7 +104,7 @@ const AdvertDetailsModal = ({ car, onClose }) => {
               <StyledAdvertDetailsRentalItem>
                 Mileage:{" "}
                 <StyledAdvertDetailsRentalItemValue>
-                  {formatMileage(car.mileage)}
+                  {mileage}
                 </StyledAdvertDetailsRentalItemValue>
               </StyledAdvertDetailsRentalItem>
 

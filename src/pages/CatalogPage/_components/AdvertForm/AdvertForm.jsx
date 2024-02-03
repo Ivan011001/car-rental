@@ -38,8 +38,6 @@ const AdvertForm = () => {
 
   const onFormSubmit = (e) => {
     e.preventDefault();
-
-    console.log("hi");
   };
 
   return (
