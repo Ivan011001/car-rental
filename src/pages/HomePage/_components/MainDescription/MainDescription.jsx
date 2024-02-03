@@ -29,20 +29,20 @@ const MainDescription = () => {
       <StyledDescriptionFeaturesList>
         Features:
         <StyledDescriptionFeaturesItem>
-          Discover: choose from a wide range of vehicles, including sleek sedans, spacious
-          SUVs, and stylish luxury cars.
+          🔎 Discover: choose from a wide range of vehicles, including sleek sedans,
+          spacious SUVs, and stylish luxury cars.
         </StyledDescriptionFeaturesItem>
         <StyledDescriptionFeaturesItem>
-          Booking: Our user-friendly website makes booking a car a breeze. With just a few
-          clicks, you can select your preferred car.
+          ✍️ Booking: Our user-friendly website makes booking a car a breeze. With just a
+          few clicks, you can select your preferred car.
         </StyledDescriptionFeaturesItem>
         <StyledDescriptionFeaturesItem>
-          Pricing: No hidden fees or surprises! Enjoy transparent pricing with no hidden
-          costs.
+          💰 Pricing: No hidden fees or surprises! Enjoy transparent pricing with no
+          hidden costs.
         </StyledDescriptionFeaturesItem>
         <StyledDescriptionFeaturesItem>
-          Flexible Rental Periods: Whether you need a car for a few hours, a day, a week,
-          or more.
+          💪 Flexible Rental Periods: Whether you need a car for a few hours, a day, a
+          week, or more.
         </StyledDescriptionFeaturesItem>
       </StyledDescriptionFeaturesList>
 

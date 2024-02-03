@@ -1,5 +1,6 @@
 import MainImage from "./_components/MainImage";
 import MainDescription from "./_components/MainDescription";
+import MainFavorites from "./_components/MainFavorites";
 
 import {
   StyledHomePageTitle,
@@ -22,6 +23,7 @@ const HomePage = () => {
         </StyledHomePageInfoSection>
 
         <StyledHomePageInfoSection>
+          <MainFavorites />
           <MainImage src="/main-image-2.webp" />
         </StyledHomePageInfoSection>
       </StyledHomePageInfo>

@@ -1,18 +1,22 @@
 import styled from "styled-components";
 
-export const StyledDescriptionContainer = styled.div`
+export const StyledFavoritesContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: start;
 `;
 
-export const StyledDescriptionTitle = styled.h2`
+export const StyledFavoritesTitle = styled.h2`
   color: var(--secondary-text-color);
   font-size: 26px;
 `;
 
-export const StyledDescriptionFeaturesList = styled.ul`
+export const StyledFavoritesDescription = styled.p`
+  color: var(--secondary-text-color);
+`;
+
+export const StyledFavoritesFeatureList = styled.ul`
   color: var(--accent-color);
   font-weight: 900;
   font-size: 20px;
@@ -22,7 +26,7 @@ export const StyledDescriptionFeaturesList = styled.ul`
   gap: 6px;
 `;
 
-export const StyledDescriptionFeaturesItem = styled.li`
+export const StyledFavoritesFeaturesItem = styled.li`
   color: var(--secondary-text-color);
   font-weight: 500;
   font-size: 16px;
