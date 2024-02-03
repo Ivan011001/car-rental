@@ -1,3 +1,5 @@
+import makes from "/makes.json";
+
 import { createPrices } from "@/utils";
 
 import Button from "@/components/ui/Button";
@@ -11,30 +13,6 @@ import {
   StyledAvdretFormCustomSelect,
 } from "./AdvertForm.styled";
 
-const makes = [
-  "Buick",
-  "Volvo",
-  "HUMMER",
-  "Subaru",
-  "Mitsubishi",
-  "Nissan",
-  "Lincoln",
-  "GMC",
-  "Hyundai",
-  "MINI",
-  "Bentley",
-  "Aston Martin",
-  "Pontiac",
-  "Lamborghini",
-  "Audi",
-  "BMW",
-  "Chevrolet",
-  "Mercedes-Benz",
-  "Chrysler",
-  "Kia",
-  "Land",
-];
-
 const AdvertForm = () => {
   const prices = createPrices();
 
@@ -43,7 +21,7 @@ const AdvertForm = () => {
     const { brand, price } = e.target.elements;
     const data = {
       brand: brand.value,
-      price: price.value,
+      maxPrice: price.value,
     };
   };
 
