@@ -18,7 +18,7 @@ Welcome to our Car Rental App! This application allows users to easily find and 
 *The welcoming home page displays main features and innovations.*
 
 # Catalog 
-<img width="980" alt="catalog page" src="public/screenshots/catalog">
+<img width="980" alt="catalog page" src="public/screenshots/catalog.png">
 *The catalog page shows the list of cars depending on filters.*
 
 # Favorites 
