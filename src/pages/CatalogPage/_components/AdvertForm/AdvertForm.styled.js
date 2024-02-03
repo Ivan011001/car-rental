@@ -28,9 +28,8 @@ export const StyledAvdretFormCustomSelect = styled.div`
 `;
 
 export const StyledAvdretFormSelect = styled.select`
-  color: #121417;
+  color: var(--secondary-text-color);
   height: 48px;
-  display: block;
   width: ${({ $width }) => `${$width}px`};
   border-radius: 14px;
   border: none;
@@ -42,12 +41,9 @@ export const StyledAvdretFormSelect = styled.select`
 
   cursor: pointer;
 
-  option {
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 111%;
-    color: green;
-  }
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 111%;
 
   &:focus {
     outline: 1px solid var(--accent-color);
