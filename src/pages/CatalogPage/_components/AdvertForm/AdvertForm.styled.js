@@ -20,17 +20,26 @@ export const StyledAdvertFormLabel = styled.label`
   line-height: 129%;
 `;
 
+export const StyledAvdretFormCustomSelect = styled.div`
+  position: relative;
+  display: inline-block;
+  display: flex;
+`;
+
 export const StyledAvdretFormInput = styled.select`
+  color: #121417;
+
+  display: block;
+  width: 100%;
   border-radius: 14px;
   border: none;
-  padding: 14px 89px 14px 18px;
+  padding: 14px 18px;
   background: #f7f7fb;
-
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
 
-  /* transition: var(--transition); */
+  cursor: pointer;
 
   & > option {
     font-weight: 500;
@@ -42,4 +51,14 @@ export const StyledAvdretFormInput = styled.select`
   &:focus {
     outline: 1px solid var(--accent-color);
   }
+`;
+
+export const StyledAvdretFormArrowIcon = styled.svg`
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  pointer-events: none;
 `;

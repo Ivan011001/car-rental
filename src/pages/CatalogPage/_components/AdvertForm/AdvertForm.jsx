@@ -7,6 +7,8 @@ import {
   StyledAdvertFormItemWrapper,
   StyledAdvertFormLabel,
   StyledAvdretFormInput,
+  StyledAvdretFormArrowIcon,
+  StyledAvdretFormCustomSelect,
 } from "./AdvertForm.styled";
 
 const makes = [
@@ -44,27 +46,38 @@ const AdvertForm = () => {
     <StyledAdvertForm onSubmit={onFormSubmit}>
       <StyledAdvertFormItemWrapper>
         <StyledAdvertFormLabel htmlFor="car_brand">Car Brand</StyledAdvertFormLabel>
-        <StyledAvdretFormInput placeholder="Enter the text" id="car_brand">
-          <option selected disabled>
-            Enter the text
-          </option>
-          {makes.map((make) => (
-            <option key={make}>{make}</option>
-          ))}
-        </StyledAvdretFormInput>
+
+        <StyledAvdretFormCustomSelect>
+          <StyledAvdretFormInput placeholder="Enter the text" id="car_brand">
+            <option selected disabled>
+              Enter the text
+            </option>
+            {makes.map((make) => (
+              <option key={make}>{make}</option>
+            ))}
+          </StyledAvdretFormInput>
+          <StyledAvdretFormArrowIcon>
+            <use xlinkHref="/sprite.svg#icon-chevron-down"></use>
+          </StyledAvdretFormArrowIcon>
+        </StyledAvdretFormCustomSelect>
       </StyledAdvertFormItemWrapper>
 
       <StyledAdvertFormItemWrapper>
         <StyledAdvertFormLabel htmlFor="car_price">Price/ 1 hour</StyledAdvertFormLabel>
 
-        <StyledAvdretFormInput placeholder="To $" id="car_price">
-          <option selected disabled>
-            To $
-          </option>
-          {prices.map((price) => (
-            <option key={price}>{price}</option>
-          ))}
-        </StyledAvdretFormInput>
+        <StyledAvdretFormCustomSelect>
+          <StyledAvdretFormInput placeholder="To $" id="car_price">
+            <option selected disabled>
+              To $
+            </option>
+            {prices.map((price) => (
+              <option key={price}>{price}</option>
+            ))}
+          </StyledAvdretFormInput>
+          <StyledAvdretFormArrowIcon>
+            <use xlinkHref="/sprite.svg#icon-chevron-down"></use>
+          </StyledAvdretFormArrowIcon>
+        </StyledAvdretFormCustomSelect>
       </StyledAdvertFormItemWrapper>
 
       <StyledAdvertFormItemWrapper>
@@ -77,6 +90,16 @@ const AdvertForm = () => {
       <Button padY={14} padX={44}>
         Search
       </Button>
+
+      <StyledAvdretFormCustomSelect>
+        <StyledAvdretFormInput>
+          {makes.map((make) => (
+            <option key={make} value={make}>
+              {make}
+            </option>
+          ))}
+        </StyledAvdretFormInput>
+      </StyledAvdretFormCustomSelect>
     </StyledAdvertForm>
   );
 };
