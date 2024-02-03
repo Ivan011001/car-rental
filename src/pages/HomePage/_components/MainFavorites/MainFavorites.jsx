@@ -22,9 +22,9 @@ const MainFavorites = () => {
       <StyledFavoritesTitle>Our brand new favorites feature</StyledFavoritesTitle>
 
       <StyledFavoritesDescription>
-        We&apos;re thrilled to unveil our brand new favorite feature in the car rental app
-        - &quot;Ride Freedom.&quot; Say goodbye to compromise and hello to the
-        extraordinary experience of driving your dream car.
+        We&apos;re thrilled to unveil our brand new favorite feature in the car rental
+        app. Say goodbye to compromise and hello to the extraordinary experience of
+        driving your dream car.
       </StyledFavoritesDescription>
 
       <StyledFavoritesFeatureList>
