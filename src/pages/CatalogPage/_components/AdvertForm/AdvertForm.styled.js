@@ -26,9 +26,9 @@ export const StyledAvdretFormCustomSelect = styled.div`
   display: flex;
 `;
 
-export const StyledAvdretFormInput = styled.select`
+export const StyledAvdretFormSelect = styled.select`
   color: #121417;
-
+  height: 48px;
   display: block;
   width: ${({ $width }) => `${$width}px`};
   border-radius: 14px;
@@ -41,11 +41,11 @@ export const StyledAvdretFormInput = styled.select`
 
   cursor: pointer;
 
-  & > option {
+  option {
     font-weight: 500;
     font-size: 18px;
     line-height: 111%;
-    color: #121417;
+    color: green;
   }
 
   &:focus {
@@ -61,4 +61,45 @@ export const StyledAvdretFormArrowIcon = styled.svg`
   right: 10px;
   transform: translateY(-50%);
   pointer-events: none;
+`;
+
+export const StyledAvdretFormMileageInput = styled.div`
+  display: flex;
+  gap: 1px;
+`;
+
+export const StyledAvdretFormInputFrom = styled.input`
+  height: 48px;
+  box-sizing: border-box;
+  border-right: 1px solid rgba(138, 138, 137, 0.2);
+  border-radius: 14px 0 0 14px;
+  border: none;
+  padding: 14px 18px;
+
+  background: #f7f7fb;
+
+  &::placeholder {
+    color: var(--secondary--text-color);
+  }
+  &:focus {
+    outline: 1px solid var(--accent-color);
+  }
+`;
+
+export const StyledAvdretFormInputTo = styled.input`
+  height: 48px;
+  box-sizing: border-box;
+
+  border-radius: 0 14px 14px 0;
+  border: none;
+  padding: 14px 18px;
+
+  background: #f7f7fb;
+  &::placeholder {
+    color: var(--secondary--text-color);
+  }
+
+  &:focus {
+    outline: 1px solid var(--accent-color);
+  }
 `;

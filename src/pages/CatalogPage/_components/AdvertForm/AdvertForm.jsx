@@ -8,9 +8,12 @@ import {
   StyledAdvertForm,
   StyledAdvertFormItemWrapper,
   StyledAdvertFormLabel,
-  StyledAvdretFormInput,
+  StyledAvdretFormSelect,
   StyledAvdretFormArrowIcon,
   StyledAvdretFormCustomSelect,
+  StyledAvdretFormMileageInput,
+  StyledAvdretFormInputFrom,
+  StyledAvdretFormInputTo,
 } from "./AdvertForm.styled";
 
 const AdvertForm = () => {
@@ -18,11 +21,15 @@ const AdvertForm = () => {
 
   const onFormSubmit = (e) => {
     e.preventDefault();
-    const { brand, price } = e.target.elements;
+    const { brand, price, minMileage, maxMileage } = e.target.elements;
     const data = {
       brand: brand.value,
       maxPrice: price.value,
+      minMileage: minMileage.value,
+      maxMileage: maxMileage.value,
     };
+
+    console.log(data);
   };
 
   return (
@@ -31,7 +38,7 @@ const AdvertForm = () => {
         <StyledAdvertFormLabel htmlFor="car_brand">Car Brand</StyledAdvertFormLabel>
 
         <StyledAvdretFormCustomSelect>
-          <StyledAvdretFormInput
+          <StyledAvdretFormSelect
             name="brand"
             placeholder="Enter the text"
             id="car_brand"
@@ -46,7 +53,7 @@ const AdvertForm = () => {
                 {make}
               </option>
             ))}
-          </StyledAvdretFormInput>
+          </StyledAvdretFormSelect>
           <StyledAvdretFormArrowIcon>
             <use xlinkHref="/sprite.svg#icon-chevron-down"></use>
           </StyledAvdretFormArrowIcon>
@@ -57,7 +64,7 @@ const AdvertForm = () => {
         <StyledAdvertFormLabel htmlFor="car_price">Price/ 1 hour</StyledAdvertFormLabel>
 
         <StyledAvdretFormCustomSelect>
-          <StyledAvdretFormInput
+          <StyledAvdretFormSelect
             name="price"
             placeholder="To $"
             id="car_price"
@@ -70,7 +77,7 @@ const AdvertForm = () => {
             {prices.map((price) => (
               <option key={price}>{price}</option>
             ))}
-          </StyledAvdretFormInput>
+          </StyledAvdretFormSelect>
           <StyledAvdretFormArrowIcon>
             <use xlinkHref="/sprite.svg#icon-chevron-down"></use>
           </StyledAvdretFormArrowIcon>
@@ -78,10 +85,23 @@ const AdvertForm = () => {
       </StyledAdvertFormItemWrapper>
 
       <StyledAdvertFormItemWrapper>
-        <StyledAdvertFormLabel htmlFor="car_mileage">
+        <StyledAdvertFormLabel htmlFor="min_mileage">
           Сar mileage / km
         </StyledAdvertFormLabel>
-        <StyledAvdretFormInput placeholder="Enter the text" id="car_mileage" />
+        <StyledAvdretFormMileageInput>
+          <StyledAvdretFormInputFrom
+            type="number"
+            name="minMileage"
+            placeholder="From"
+            id="min_mileage"
+          />
+          <StyledAvdretFormInputTo
+            type="number"
+            name="maxMileage"
+            placeholder="To"
+            id="max_mileage"
+          />
+        </StyledAvdretFormMileageInput>
       </StyledAdvertFormItemWrapper>
 
       <Button padY={14} padX={44}>
