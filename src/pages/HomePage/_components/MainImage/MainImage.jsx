@@ -1,7 +1,8 @@
 import { StyledMainImage } from "./MainImage.styled";
 
-const MainImage = () => {
-  return <StyledMainImage src="/main-image.webp" alt="Car on the road" />;
+// eslint-disable-next-line react/prop-types
+const MainImage = ({ src }) => {
+  return <StyledMainImage src={src} alt="Car on the road" />;
 };
 
 export default MainImage;

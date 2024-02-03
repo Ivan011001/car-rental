@@ -5,6 +5,7 @@ import {
   StyledHomePageTitle,
   StyledHomePageTitleName,
   StyledHomePageInfo,
+  StyledHomePageInfoSection,
 } from "./HomePage.styled";
 
 const HomePage = () => {
@@ -15,8 +16,14 @@ const HomePage = () => {
       </StyledHomePageTitle>
 
       <StyledHomePageInfo>
-        <MainImage />
-        <MainDescription />
+        <StyledHomePageInfoSection>
+          <MainImage src="/main-image.webp" />
+          <MainDescription />
+        </StyledHomePageInfoSection>
+
+        <StyledHomePageInfoSection>
+          <MainImage src="/main-image-2.webp" />
+        </StyledHomePageInfoSection>
       </StyledHomePageInfo>
     </div>
   );

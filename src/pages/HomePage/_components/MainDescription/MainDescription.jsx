@@ -1,3 +1,5 @@
+import { useNavigate } from "react-router-dom";
+
 import Button from "@/components/ui/Button";
 
 import {
@@ -8,14 +10,22 @@ import {
 } from "./MainDescription.styled";
 
 const MainDescription = () => {
+  const navigate = useNavigate();
+
+  const onHandleClick = () => {
+    navigate("/catalog");
+  };
+
   return (
     <StyledDescriptionContainer>
       <StyledDescriptionTitle>Rent Your Dream Car with Our App</StyledDescriptionTitle>
+
       <p>
         Explore the freedom of the open road with our premier car rental service. Whether
         you&apos;re planning a weekend getaway, a business trip, or an extended vacation,
         we provide a seamless and convenient solution for all your transportation needs.
       </p>
+
       <StyledDescriptionFeaturesList>
         Features:
         <StyledDescriptionFeaturesItem>
@@ -35,7 +45,8 @@ const MainDescription = () => {
           or more.
         </StyledDescriptionFeaturesItem>
       </StyledDescriptionFeaturesList>
-      <Button padY={14} padX={80}>
+
+      <Button padY={14} padX={80} onClick={onHandleClick}>
         Start Renting
       </Button>
     </StyledDescriptionContainer>
