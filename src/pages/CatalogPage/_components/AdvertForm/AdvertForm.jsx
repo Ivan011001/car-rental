@@ -3,6 +3,7 @@ import makes from "/makes.json";
 import { createPrices } from "@/utils";
 
 import Button from "@/components/ui/Button";
+import Input from "@/components/ui/Input";
 
 import {
   StyledAdvertForm,

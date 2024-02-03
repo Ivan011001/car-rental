@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { StyledInput } from "@/components/ui/Input/Input.styled";
 
 export const StyledAdvertForm = styled.form`
   display: flex;
@@ -65,41 +66,13 @@ export const StyledAvdretFormArrowIcon = styled.svg`
 
 export const StyledAvdretFormMileageInput = styled.div`
   display: flex;
-  gap: 1px;
 `;
 
-export const StyledAvdretFormInputFrom = styled.input`
-  height: 48px;
-  box-sizing: border-box;
+export const StyledAvdretFormInputFrom = styled(StyledInput)`
   border-right: 1px solid rgba(138, 138, 137, 0.2);
   border-radius: 14px 0 0 14px;
-  border: none;
-  padding: 14px 18px;
-
-  background: #f7f7fb;
-
-  &::placeholder {
-    color: var(--secondary--text-color);
-  }
-  &:focus {
-    outline: 1px solid var(--accent-color);
-  }
 `;
 
-export const StyledAvdretFormInputTo = styled.input`
-  height: 48px;
-  box-sizing: border-box;
-
+export const StyledAvdretFormInputTo = styled(StyledInput)`
   border-radius: 0 14px 14px 0;
-  border: none;
-  padding: 14px 18px;
-
-  background: #f7f7fb;
-  &::placeholder {
-    color: var(--secondary--text-color);
-  }
-
-  &:focus {
-    outline: 1px solid var(--accent-color);
-  }
 `;
