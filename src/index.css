@@ -41,6 +41,7 @@ body {
 }
 
 main {
+  padding-top: 50px;
   flex-grow: 1;
   /* display: flex; */
 }
