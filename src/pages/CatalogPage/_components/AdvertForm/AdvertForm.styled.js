@@ -20,15 +20,19 @@ export const StyledAdvertFormLabel = styled.label`
   line-height: 129%;
 `;
 
-export const StyledAvdretFormInput = styled.input`
+export const StyledAvdretFormInput = styled.select`
   border-radius: 14px;
   border: none;
   padding: 14px 89px 14px 18px;
   background: #f7f7fb;
 
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
   /* transition: var(--transition); */
 
-  &::placeholder {
+  & > option {
     font-weight: 500;
     font-size: 18px;
     line-height: 111%;
