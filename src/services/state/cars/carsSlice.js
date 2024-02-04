@@ -6,6 +6,8 @@ const initialState = {
   isLoading: false,
   error: null,
   cars: [],
+  count: 0,
+  page: 1,
   favorites: [],
 };
 
@@ -26,26 +28,36 @@ const carsSlice = createSlice({
         );
       }
     },
+    clearAdverts: (state) => {
+      state.cars = [];
+    },
+    clearPage: (state) => {
+      state.page = 1;
+    },
   },
   extraReducers: (builder) => {
     builder.addCase(getAllCars.pending, (state) => {
-      state.isLoading = true;
+      // state.isLoading = true;
       state.error = null;
-      state.cars = [];
+      state.count = 0;
+      // state.cars = [];
     });
     builder.addCase(getAllCars.fulfilled, (state, action) => {
       state.isLoading = false;
       state.error = null;
-      state.cars = action.payload;
+      state.count = action.payload.count;
+      state.cars = [...state.cars, ...action.payload.adverts];
+      state.page += 1;
     });
     builder.addCase(getAllCars.rejected, (state, action) => {
       state.isLoading = false;
       state.error = action.payload;
+      state.count = 0;
       state.cars = [];
     });
   },
 });
 
-export const { toggleFavorite } = carsSlice.actions;
+export const { toggleFavorite, clearAdverts, clearPage } = carsSlice.actions;
 
 export const carsReducer = carsSlice.reducer;

@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 
 import { getAllCars } from "@/services/state/cars/carsOperations";
 import { selectIsLoading } from "@/services/state/cars/carsSelectors";
+import { clearAdverts, clearPage } from "@/services/state/cars/carsSlice";
 
 import Loader from "@/components/ui/Loader";
 
@@ -17,6 +18,11 @@ const CatalogPage = () => {
 
   useEffect(() => {
     dispatch(getAllCars());
+
+    return () => {
+      dispatch(clearAdverts());
+      dispatch(clearPage());
+    };
   }, [dispatch]);
 
   return (
