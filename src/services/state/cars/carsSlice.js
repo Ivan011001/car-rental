@@ -37,7 +37,7 @@ const carsSlice = createSlice({
   },
   extraReducers: (builder) => {
     builder.addCase(getAllCars.pending, (state) => {
-      // state.isLoading = true;
+      state.isLoading = true;
       state.error = null;
       state.count = 0;
       // state.cars = [];

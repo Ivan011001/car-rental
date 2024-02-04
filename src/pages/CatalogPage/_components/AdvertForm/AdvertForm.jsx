@@ -1,3 +1,8 @@
+import { useDispatch } from "react-redux";
+import { getAllCars } from "@/services/state/cars/carsOperations";
+import { clearPage } from "@/services/state/cars/carsSlice";
+import { clearAdverts } from "@/services/state/cars/carsSlice";
+
 import makes from "/makes.json";
 
 import { createPrices } from "@/utils";
@@ -17,6 +22,7 @@ import {
 } from "./AdvertForm.styled";
 
 const AdvertForm = () => {
+  const dispatch = useDispatch();
   const prices = createPrices();
 
   const onFormSubmit = (e) => {
@@ -28,8 +34,9 @@ const AdvertForm = () => {
       minMileage: minMileage.value,
       maxMileage: maxMileage.value,
     };
-
-    console.log(data);
+    dispatch(clearPage());
+    dispatch(clearAdverts());
+    dispatch(getAllCars(data));
   };
 
   return (

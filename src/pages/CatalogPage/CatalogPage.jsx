@@ -27,14 +27,10 @@ const CatalogPage = () => {
 
   return (
     <StyledCatalogPage>
-      {isLoading ? (
-        <Loader />
-      ) : (
-        <>
-          <AdvertForm />
-          <AdvertList />
-        </>
-      )}
+      {isLoading && <Loader />}
+
+      <AdvertForm />
+      <AdvertList />
     </StyledCatalogPage>
   );
 };
