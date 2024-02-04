@@ -6,6 +6,10 @@ import {
   StyledFooterContainer,
   StyledFooterMetaContainer,
   StyledFooterMetaLink,
+  StyledFooterMediaContainer,
+  StyledFooterMediaIcon,
+  StyledFooterContactContainer,
+  StyledFooterContactItem,
 } from "./Footer.styled";
 
 const Footer = () => {
@@ -31,6 +35,50 @@ const Footer = () => {
               Terms & Conditions
             </StyledFooterMetaLink>
           </StyledFooterMetaContainer>
+
+          <StyledFooterMediaContainer>
+            <li>
+              <a href="">
+                <StyledFooterMediaIcon>
+                  <use xlinkHref="/sprite.svg#icon-twitter"></use>
+                </StyledFooterMediaIcon>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <StyledFooterMediaIcon>
+                  <use xlinkHref="/sprite.svg#icon-instagram"></use>
+                </StyledFooterMediaIcon>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <StyledFooterMediaIcon>
+                  <use xlinkHref="/sprite.svg#icon-youtube"></use>
+                </StyledFooterMediaIcon>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <StyledFooterMediaIcon>
+                  <use xlinkHref="/sprite.svg#icon-telegram"></use>
+                </StyledFooterMediaIcon>
+              </a>
+            </li>
+          </StyledFooterMediaContainer>
+
+          <StyledFooterContactContainer>
+            <StyledFooterContactItem>
+              Email: <a href="mailto: carrental@rent.com">carrental@rent.com</a>
+            </StyledFooterContactItem>
+            <StyledFooterContactItem>
+              Tel number: <a href="tel:+380730000000">+380730000000</a>
+            </StyledFooterContactItem>
+            <StyledFooterContactItem>
+              Location:{" "}
+              <a href="https://maps.app.goo.gl/3xQ9QUjyYEcDiUKw7">Vehicle street, 30</a>
+            </StyledFooterContactItem>
+          </StyledFooterContactContainer>
         </StyledFooterContainer>
       </Container>
     </StyledFooter>

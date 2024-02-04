@@ -4,7 +4,6 @@ import { clearPage } from "@/services/state/cars/carsSlice";
 import { clearAdverts } from "@/services/state/cars/carsSlice";
 
 import makes from "/makes.json";
-import toast from "react-hot-toast";
 
 import { createPrices } from "@/utils";
 
@@ -29,17 +28,10 @@ const AdvertForm = () => {
   const onFormSubmit = (e) => {
     e.preventDefault();
 
-    const { brand, price, minMileage, maxMileage } = e.target.elements;
-
-    if (Number(minMileage.value) < 0 || Number(maxMileage.value) < 0) {
-      return toast.error("Mileage should me more than 0");
-    }
+    const { brand } = e.target.elements;
 
     const data = {
       brand: brand.value,
-      maxPrice: price.value,
-      minMileage: Number(minMileage.value),
-      maxMileage: Number(maxMileage.value),
     };
 
     dispatch(clearPage());

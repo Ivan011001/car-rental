@@ -27,3 +27,36 @@ export const StyledFooterMetaLink = styled.a`
     color: var(--hover-color);
   }
 `;
+
+export const StyledFooterMediaContainer = styled.ul`
+  display: flex;
+  gap: 8px;
+`;
+
+export const StyledFooterMediaIcon = styled.svg`
+  width: 20px;
+  height: 20px;
+  fill: #fff;
+  stroke: #fff;
+`;
+
+export const StyledFooterContactContainer = styled.ul`
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+`;
+
+export const StyledFooterContactItem = styled.li`
+  color: #fff;
+
+  & > a {
+    color: inherit;
+
+    transition: var(--transition);
+
+    &:hover,
+    &:focus {
+      color: var(--hover-color);
+    }
+  }
+`;
