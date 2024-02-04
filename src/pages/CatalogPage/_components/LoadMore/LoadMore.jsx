@@ -1,7 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { getAllCars } from "@/services/state/cars/carsOperations";
 import { selectCurrentPage } from "@/services/state/cars/carsSelectors";
-// import { incrementPage } from "@/services/state/cars/carsSlice";
 
 import { StyledLoadMoreButtonWrapper, StyledLoadMoreButton } from "./LoadMore.styled";
 

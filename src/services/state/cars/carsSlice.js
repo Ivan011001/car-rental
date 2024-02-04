@@ -40,7 +40,6 @@ const carsSlice = createSlice({
       state.isLoading = true;
       state.error = null;
       state.count = 0;
-      // state.cars = [];
     });
     builder.addCase(getAllCars.fulfilled, (state, action) => {
       state.isLoading = false;

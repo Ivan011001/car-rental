@@ -17,7 +17,7 @@ const CatalogPage = () => {
   const isLoading = useSelector(selectIsLoading);
 
   useEffect(() => {
-    dispatch(getAllCars());
+    dispatch(getAllCars({}));
 
     return () => {
       dispatch(clearAdverts());
